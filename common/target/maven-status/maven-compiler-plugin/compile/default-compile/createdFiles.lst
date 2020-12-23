@@ -1,0 +1,8 @@
+com\mq\license\comon\util\LinuxServerInfo.class
+com\mq\license\comon\entity\LicenseCreator.class
+com\mq\license\comon\util\WindowsServerInfo.class
+com\mq\license\comon\util\MqKeyStoreParam.class
+com\mq\license\comon\entity\LicenseParams.class
+com\mq\license\comon\entity\LicenseCheck.class
+com\mq\license\comon\util\MqLicenseManage.class
+com\mq\license\comon\util\AbstractServerInfos.class
