@@ -1,5 +1,0 @@
-server:
-  port: 6001
-
-license:
-  licensePath: license.lic
