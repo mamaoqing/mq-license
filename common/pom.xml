@@ -19,7 +19,9 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <includeSystemScope>true</includeSystemScope>
-                    <mainClass>com.estate.BillApplication</mainClass>
+                    <mainClass>com.estate.sdzy.wechat.WeChatApplication</mainClass>
+                    <fork>true</fork>
+                    <classifier>exec</classifier>
                 </configuration>
             </plugin>
         </plugins>

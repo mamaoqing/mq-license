@@ -1,0 +1,20 @@
+//发送的json数据
+{
+  "subject": "license-mq",
+  "privateAlias": "privateKey",
+  "keyPass": "mq951021",
+  "storePass": "mq951021",
+  "licensePath": "D:/mq/license/license.lic",
+  "privateKeysStorePath": "D:/mq/license/privateKeys.keystore",
+  "issuedTime": "2020-12-24 00:00:01",
+  "expiryTime": "2020-12-24 11:38:20",
+  "consumerType": "User",
+  "consumerAmount": 1,
+  "description": "mmq license 证书生成",
+  "licenseCheck": {
+    "ipAddress": ["192.168.116.128", "192.168.0.108"],
+    "macAddress": ["00-50-56-C0-00-08", "2C-F0-5D-32-B8-26"],
+    "cpuSerial": "BFEBFBFF000906ED",
+    "mainBoardSerial": "K3F0025545"
+  }
+}

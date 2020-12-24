@@ -75,6 +75,7 @@ public class MqLicenseManage extends LicenseManager {
         certificate = getPrivacyGuard().key2cert(key);
         notary.verify(certificate);
         final LicenseContent content = (LicenseContent) this.load(certificate.getEncoded());
+//        验证服务器信息
         this.validate(content);
         setCertificate(certificate);
 
@@ -92,7 +93,10 @@ public class MqLicenseManage extends LicenseManager {
         LicenseCheck expectedCheckModel = (LicenseCheck) content.getExtra();
         //当前服务器真实的参数信息
         LicenseCheck serverCheckModel = getServerInfos();
-
+        log.info("+++++ ipaddress ： {} ++++",serverCheckModel.getIpAddress());
+        log.info("+++++ macaddress ： {} ++++",serverCheckModel.getMacAddress());
+        log.info("+++++ cpuserial ： {} ++++",serverCheckModel.getCpuSerial());
+        log.info("+++++ mainboardserial ： {} ++++",serverCheckModel.getMainBoardSerial());
         if (expectedCheckModel != null && serverCheckModel != null) {
             //校验IP地址
             if (!checkIpAddress(expectedCheckModel.getIpAddress(), serverCheckModel.getIpAddress())) {
@@ -137,7 +141,7 @@ public class MqLicenseManage extends LicenseManager {
         } else {//其他服务器类型
             abstractServerInfos = new LinuxServerInfo();
         }
-
+        log.info("");
         return abstractServerInfos.getServerInfos();
     }
 
