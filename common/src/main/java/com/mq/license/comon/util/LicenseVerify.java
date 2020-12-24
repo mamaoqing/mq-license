@@ -37,7 +37,7 @@ public class LicenseVerify {
             licenseManager.uninstall();
 
             result = licenseManager.install(new File(param.getLicensePath()));
-            log.info(MessageFormat.format("license is installed .  start time : - blocking timel .blocking timel ： - {1}",format.format(result.getNotBefore()),format.format(result.getNotAfter())));
+            log.info(MessageFormat.format("license is installed .  start time : {0}. blocking timel .blocking timel ： {1}",format.format(result.getNotBefore()),format.format(result.getNotAfter())));
         }catch (Exception e){
             log.error("证书安装失败！",e);
         }

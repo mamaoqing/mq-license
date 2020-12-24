@@ -27,6 +27,7 @@ public class LogingInterceptor implements HandlerInterceptor {
         log.info("开始执行拦截验证：<{}>",verify);
         if(!verify){
             //do something
+            log.error("license is out of date......");
         }
         return true;
     }
