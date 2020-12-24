@@ -1,4 +1,4 @@
-//发送的json数据
+
 {
   "subject": "license-mq",
   "privateAlias": "privateKey",
@@ -16,5 +16,8 @@
     "macAddress": ["00-50-56-C0-00-08", "2C-F0-5D-32-B8-26"],
     "cpuSerial": "BFEBFBFF000906ED",
     "mainBoardSerial": "K3F0025545"
-  }
+  },
+  "first": "keytool -genkeypair -keysize 1024 -validity 3650 -alias \"privateKey\" -keystore \"privateKeys.keystore\" -storepass \"mq951021\" -keypass \"mq951021\" -dname \"CN=ma, OU=mq, O=mq, L=sd, ST=jn, C=cn\"",
+  "second": "keytool -exportcert -alias \"privateKey\" -keystore \"privateKeys.keystore\" -storepass \"mq951021\" -file \"certfile.cer\"",
+  "third": "keytool -import -alias \"publicCert\" -file \"certfile.cer\" -keystore \"publicCerts.keystore\" -storepass \"mq951021\""
 }
