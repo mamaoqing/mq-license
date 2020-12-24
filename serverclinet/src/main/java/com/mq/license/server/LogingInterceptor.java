@@ -23,7 +23,6 @@ public class LogingInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         LicenseVerify licenseVerify = new LicenseVerify();
-
         boolean verify = licenseVerify.verify();
         log.info("开始执行拦截验证：<{}>",verify);
         if(!verify){

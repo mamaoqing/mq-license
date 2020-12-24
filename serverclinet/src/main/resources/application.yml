@@ -6,4 +6,4 @@ license:
   subject: license-mq
   publicAlias: publicCert
   storePass: mq951021
-  publicKeysStorePath: D:/mq/license/publicCerts.keystore
+  publicKeysStorePath: publicCerts.keystore
